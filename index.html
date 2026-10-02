@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مذاكرتي</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+</head>
+<script src="script.js"></script>
+<body>
+
+    <header><button onclick="toggleDarkMode()">🌙</button>
+        <div class="header-content">
+            <div>
+                <h1>📚 مذاكرتي</h1>
+                <p>نظّم مذاكرتك وحقق أهدافك</p>
+            </div>
+
+            <button id="darkModeButton" class="dark-button">
+                🌙
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- الإحصائيات -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">📖</div>
+                <h3>المواد</h3>
+                <div id="subjectsCount" class="number">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <h3>المهام</h3>
+                <div id="tasksCount" class="number">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <h3>الإنجاز</h3>
+                <div id="progress" class="number">0%</div>
+            </div>
+
+        </section>
+
+
+        <!-- المواد -->
+
+        <section class="box">
+
+            <h2>📚 موادي</h2>
+
+            <div class="input-row">
+
+                <input
+                    id="subjectInput"
+                    type="text"
+                    placeholder="اكتب اسم المادة"
+                >
+<button onclick="addSubject()">إضافة</button>
+                
+                    إضافة
+                </>
+
+            </div>
+
+            <ul id="subjectList"></ul>
+
+        </section>
+
+
+        <!-- المهام -->
+
+        <section class="box">
+
+            <h2>✅ مهامي</h2>
+
+            <div class="input-row">
+
+                <input
+                    id="taskInput"
+                    type="text"
+                    placeholder="اكتب مهمة مثل: حل واجب الرياضيات"
+                <            </div>
+<button onclick="addTask()">إضافة</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+
+        <!-- المؤقت -->
+
+      <section class="box">
+    <h2>⏱️ مؤقت المذاكرة</h2>
+
+    <div id="timer">25:00</div>
+
+    <button onclick="startTimer()">▶️ ابدأ</button>
+    <button onclick="pauseTimer()">⏸️ إيقاف</button>
+    <button onclick="resetTimer()">🔄 إعادة</button>
+      </section>
+
+        
+
+
+        <!-- الإعدادات -->
+
+        <section class="box settings">
+
+            <h2>⚙️ الإعدادات</h2>
+
+            <button id="clearButton" class="delete-all">
+                🗑️ حذف كل البيانات
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: #f3f6fa;
+    color: #1f2937;
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #2563eb;
+    color: white;
+
+    padding: 25px 20px;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+
+    font-size: 34px;
+}
+
+header p {
+    margin: 0;
+
+    font-size: 17px;
+}
+
+.dark-button {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 92%;
+    max-width: 900px;
+
+    margin: 30px auto;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 25px 10px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+    font-size: 35px;
+}
+
+.stat-card h3 {
+    margin: 10px 0;
+}
+
+.number {
+    font-size: 32px;
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* =========================
+   BOX
+========================= */
+
+.box {
+    background: white;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-row {
+    display: flex;
+
+    gap: 10px;
+}
+
+.input-row input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.input-row input:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 18px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+ul {
+    padding: 0;
+
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+
+    background: #f1f5f9;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+li span {
+    flex: 1;
+}
+
+li button {
+    padding: 8px 11px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer-box {
+    text-align: center;
+}
+
+#timer {
+    font-size: 60px;
+
+    font-weight: bold;
+
+    margin: 25px 0;
+
+    color: #2563eb;
+}
+
+.timer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   SETTINGS
+========================= */
+
+.settings {
+    text-align: center;
+}
+
+.delete-all {
+    background: #dc2626;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background: #111827;
+
+    color: #f9fafb;
+}
+
+body.dark .stat-card,
+body.dark .box {
+    background: #1f2937;
+
+    color: #f9fafb;
+}
+
+body.dark li {
+    background: #374151;
+}
+
+body.dark input {
+    background: #374151;
+
+    color: white;
+
+    border-color: #4b5563;
+}
+
+body.dark .dark-button {
+    background: #374151;
+
+    color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-row button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    #timer {
+        font-size: 50px;
+    }
+
+    li {
+        flex-wrap: wrap;
+    }
+}
